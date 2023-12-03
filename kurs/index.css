@@ -1,0 +1,550 @@
+:root{
+    --index: calc(1vw + 1vh);
+}
+
+#name{
+    font-size: 50px;
+}
+
+.columnblock{
+    margin-top: 30px;
+    width: 85%;
+    background-color: white;
+    padding-top: 20px;
+    padding-left: 20px;
+    margin-left: 8%;
+    padding-bottom: 20px;
+    padding-right: 15px;
+    box-shadow: 0px 0px 10px green;
+    border-radius: 10px;
+}
+.plantnames{
+    opacity: 1;
+}
+
+.limiter-img img{
+    height: auto;
+    width: calc(var(--index)*20);
+}
+
+.limiter-img{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3%;
+}
+
+#navv{
+    position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+
+}
+.block {margin: 3rem;}
+ 
+/* Стили для текстового поля с кнопкой "Развернуть" */
+.limiter {
+  max-height: 100px;
+  overflow: hidden;
+  position: relative;
+  font-family: Verdana;
+  font-size: 20px;
+}
+.limiter .bottom {
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgb(255 217 29 / 0%),
+    rgb(255 255 255)85%);
+  width: 100%;
+  height: 60px;
+  opacity: 1;
+  transition: 0.3s;
+}
+ 
+[data-more-checker^="read-more"] {
+  opacity: 0;
+  position: absolute;
+}
+[data-more-checker^="read-more"]:checked ~ .limiter {
+  max-height: none;
+}
+[data-more-checker^="read-more"]:checked ~ .limiter .bottom {
+  opacity: 0;
+  transition: 0.3s;
+}
+[data-more-checker^="read-more"] ~ .read-more-button:before  {
+  content: "Развернуть »";
+}
+[data-more-checker^="read-more"]:checked ~ .read-more-button:before {
+  content: "Свернуть «";
+}
+ 
+.read-more-button {
+  cursor: pointer;
+  display: inline-block;
+  color: #777;
+  text-decoration: underline;
+}
+
+.link{
+    font-size: 16px;
+    text-decoration: none;
+    color: green;
+}
+
+.link:hover{
+    color: pink;
+}
+
+.link:visited{
+    color: purple;
+}
+
+.gallery {
+  margin-top: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  /*justify-content: flex-start;*/
+}
+
+.image {
+  flex: 1 0 200px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.image img {
+  width: 350px;
+  height: 400px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;/* уберем это свойство чтобы освободить фиксированный отступ справа и слева */
+  justify-content: space-between; /* это позволит изображениям быть прижатыми к левому и правому краю */
+}
+
+
+/* Стили для формы */
+.form-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.form-container h2 {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="tel"],
+input[type="email"],
+input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/*button {
+  padding: 10px 20px;
+  background-color: pink;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover{
+    background-color: white;
+    color: pink;
+}*/
+
+address a{
+    text-decoration: none;
+    color: green;
+    text-shadow: 0px 0px 10px green;
+}
+
+#facts a{
+    font-size: 17px;
+    text-decoration: none;
+    color: black;
+}
+
+#facts a:hover{
+    font-size: 17px;
+    text-decoration: none;
+    color: black;
+    text-shadow: 0px 0px 10px green;
+}
+
+.grid-container {
+}
+
+.grid-item {
+  padding: 10px;
+  box-shadow: 0px 0px 10px grey;
+  flex: 0 0 300px; /* Устанавливаем ширину блока с учётом отступов */
+  margin: 15px; /* Отступ между блоками */
+  box-sizing: border-box; /* Учитываем отступы в ширине блока */
+  /* Дополнительные стили для внешнего вида блоков */
+  text-align: center;
+   border-radius: 10px;
+   transition: width 0.3s ease;
+}
+
+.grid-item:hover {
+  box-shadow: 0px 0px 10px green;
+}
+
+.grid-item img{
+  height: auto;
+  width: 95%;
+  box-shadow: 0px 0px 10px grey;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+   body {
+     display: flex;
+     flex-direction: column;
+     min-height: 100vh; /* 100vh это 100% высоты окна браузера */
+   }
+
+   .content {
+     flex: 1; /* Захватываем всё доступное пространство */
+   }
+   
+#form{
+    padding-right: 10px;
+}
+
+#footer{
+    padding: 15px;
+    margin-top: 5px;
+    background-color: lightgrey;
+    color: #363636;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 10%;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-areas: "a a c"
+                         "d b b"
+                         "f f e";                  
+  display: flex;
+  flex-wrap: wrap; /* Разрешаем перенос строк */
+}
+
+.grid-item1{
+    grid-area: a;
+}
+
+.grid-item2{
+    grid-area: b;
+}
+
+.grid-item3{
+    grid-area: c;
+}
+
+.grid-item4{
+    grid-area: d;
+}
+
+.grid-item5{
+    grid-area: e;
+}
+
+.grid-item6{
+    grid-area: f;
+}
+
+.content-grid{
+    width: 100vw;
+}
+
+@media (max-width: 700px) {
+  .block{
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+  .grid-container{
+    display: grid;
+    grid-template-areas: "a a"
+    "b c"
+    "d d"
+    "e f";
+}
+
+.grid-item1{
+    grid-area: a;
+}
+
+.grid-item2{
+    grid-area: b;
+}
+
+.grid-item3{
+    grid-area: c;
+}
+
+.grid-item4{
+    grid-area: d;
+}
+
+.grid-item5{
+    grid-area: e;
+}
+
+.grid-item6{
+    grid-area: f;
+}
+}
+
+.contact a{
+    text-decoration: none;
+    color: green;
+}
+
+.contact a:hover{
+    text-decoration: none;
+    color: white;
+}
+
+p{
+    font-size: 1.5vw;
+}
+
+@media (max-width: 800px) {
+  p{
+    font-size: 3vw;
+  }
+}
+
+.notif{
+    width: 90%;
+    background-color: #dcedd8;
+    border: solid 2px green;
+    border-radius: 5px;
+    padding: 4px;
+}
+
+/**/
+
+.container {
+  margin-top: 30px;
+  max-width: 1200px;
+  width: 95%;
+}
+.slider-wrapper {
+  position: relative;
+}
+.slider-wrapper .slide-button {
+  position: absolute;
+  top: 50%;
+  outline: none;
+  border: none;
+  height: 50px;
+  width: 50px;
+  z-index: 5;
+  color: #fff;
+  display: flex;
+  cursor: pointer;
+  font-size: 2.2rem;
+  background: #000;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+.slider-wrapper .slide-button:hover {
+  background: #404040;
+}
+.slider-wrapper .slide-button#prev-slide {
+  left: -25px;
+  display: none;
+}
+.slider-wrapper .slide-button#next-slide {
+  right: -25px;
+}
+.slider-wrapper .image-list {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 18px;
+  font-size: 0;
+  list-style: none;
+  margin-bottom: 30px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.slider-wrapper .image-list::-webkit-scrollbar {
+  display: none;
+}
+.slider-wrapper .image-list .image-item {
+  width: 325px;
+  height: 400px;
+  object-fit: cover;
+}
+.container .slider-scrollbar {
+  height: 24px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.slider-scrollbar .scrollbar-track {
+  background: #ccc;
+  width: 100%;
+  height: 2px;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  position: relative;
+}
+.slider-scrollbar:hover .scrollbar-track {
+  height: 4px;
+}
+.slider-scrollbar .scrollbar-thumb {
+  position: absolute;
+  background: #000;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  height: 100%;
+  cursor: grab;
+  border-radius: inherit;
+}
+.slider-scrollbar .scrollbar-thumb:active {
+  cursor: grabbing;
+  height: 8px;
+  top: -2px;
+}
+.slider-scrollbar .scrollbar-thumb::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -10px;
+  bottom: -10px;
+}
+/* Styles for mobile and tablets */
+@media only screen and (max-width: 1023px) {
+  .slider-wrapper .slide-button {
+    display: none !important;
+  }
+  .slider-wrapper .image-list {
+    gap: 10px;
+    margin-bottom: 15px;
+    scroll-snap-type: x mandatory;
+  }
+  .slider-wrapper .image-list .image-item {
+    width: 280px;
+    height: 380px;
+  }
+  .slider-scrollbar .scrollbar-thumb {
+    width: 20%;
+  }
+}
+
+.button {
+  position: relative;
+  padding: 10px 22px;
+  border-radius: 6px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  background-color: lightgreen;
+  transition: all 0.2s ease;
+}
+.button:active {
+  transform: scale(0.96);
+}
+.button:before,
+.button:after {
+  position: absolute;
+  content: "";
+  width: 150%;
+  left: 50%;
+  height: 100%;
+  transform: translateX(-50%);
+  z-index: 1;
+  background-repeat: no-repeat;
+}
+.button.animate::before {
+  top: -70%;
+  background-image: radial-gradient(circle, lightgreen 20%, transparent 20%),
+    radial-gradient(circle, transparent 20%, lightgreen 20%, transparent 30%),
+    radial-gradient(circle, lightgreen 20%, transparent 20%),
+    radial-gradient(circle, lightgreen 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, lightgreen 15%, transparent 20%),
+    radial-gradient(circle, lightgreen 20%, transparent 20%),
+    radial-gradient(circle, lightgreen 20%, transparent 20%),
+    radial-gradient(circle, lightgreen 20%, transparent 20%),
+    radial-gradient(circle, lightgreen 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+    10% 10%, 18% 18%;
+  animation: greentopBubbles ease-in-out 0.6s forwards infinite;
+}
+@keyframes greentopBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+      40% 90%, 55% 90%, 70% 90%;
+  }
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+      50% 50%, 65% 20%, 90% 30%;
+  }
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+      50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+.button.animate::after {
+  bottom: -70%;
+  background-image: radial-gradient(circle, lightgreen 20%, transparent 20%),
+    radial-gradient(circle, lightgreen 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, lightgreen 15%, transparent 20%),
+    radial-gradient(circle, lightgreen 20%, transparent 20%),
+    radial-gradient(circle, lightgreen 20%, transparent 20%),
+    radial-gradient(circle, lightgreen 20%, transparent 20%),
+    radial-gradient(circle, lightgreen 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+  animation: greenbottomBubbles ease-in-out 0.6s forwards infinite;
+}
+@keyframes greenbottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+      70% -10%, 70% 0%;
+  }
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+      105% 0%;
+  }
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+      110% 10%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+Conclusio

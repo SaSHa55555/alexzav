@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>plants</title>
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <link rel="icon" type="image/png" href="img/imgonline-com-ua-Resize-8bDdaiVG5hfp5KqV.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3" id="navv">
+    <div class="container-fluid">
+      <a class="navbar-brand" id="name" href="index.html">PLANTS</a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto ">
+          <li class="nav-item">
+            <a class="nav-link mx-2 active" aria-current="page" href="share.html">Share ideas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2" href="facts.html">Interesting links</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2" href="#footer">Contacts</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link mx-2 dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Lifehacks
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="care.html">уход</a></li>
+              <li><a class="dropdown-item" href="decor.html">декор</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    </nav>  
+<div class="content">
+	<section>
+		<div class="columnblock">
+      <h1 align="justify">Здесь вы можете оставить заявку на добавление вашей статьи к нам на сайт!</h1>
+      <p align="justify"> Укажите свое имя и почту, по которой можно с вами связаться, а также тему вашей статьи. В течении нескольких дней мы вам ответим!</p>
+    </div>
+	</section>
+	
+	<section>
+		<div class="columnblock" id="form">
+      <h2>Оставьте свои данные</h2>
+    <form action="#" class="form">
+      <div class="form-group">
+        <input type="tel" id="email" name="name" required placeholder="enter your name">
+      </div>
+      <div class="form-group">
+        <input type="email" id="email" name="em" required placeholder="enter your email">
+      </div>
+      <div class="form-group">
+        <input type="tel" id="email" name="theme" required placeholder="enter the theme of your article">
+      </div>
+      <button type="submit" class="button">Send!</button>  
+      <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+      <script >
+      	const token = '6976248157:AAEa_nVN0LliSCC8DeE7yJaMW2dPRZI7o6U';
+      	const id = '-1002120974786';
+      	const url = `https://api.telegram.org/bot${ token }/sendMessage`;
+      	const form = document.querySelector('.form');
+		form.addEventListener('submit', function (e){
+  		e.preventDefault();
+  		let message = `<b>application</b>\n`;
+  		message += `<b>from</b> ${this.name.value}\n`;
+  		message += `<b>email:</b> ${this.em.value}\n`;
+  		message += `<b>theme:</b> ${this.theme.value}\n`;
+  		
+  		axios.post(url, {
+  			chat_id: id,
+  			parse_mode: `html`,
+  			text: message
+  		})
+  		.then((res) => {
+  			this.name.value = "";
+  			this.em.value = "";
+  			this.theme.value = "";
+  		})
+  		
+		})
+      </script>
+	  <script>
+      const button = document.querySelector(".button");
+      button.addEventListener("click", (e) => {
+        e.preventDefault;
+        button.classList.add("animate");
+        setTimeout(() => {
+          button.classList.remove("animate");
+        }, 600);
+      });
+    </script>
+    </form>
+    </div>
+	</section>
+</div>   
+    <p> </p>
+<footer id="footer">
+		<div class="contact"><address><p>Контакты:</p></address>
+<p align="justify">По всем возникшим вопросам и предложениям вы можете <a href="mailto:123@mail.ru">написать нам на почту</a> или <a href="tel:01234567890">написать</a> в любом удобном вам мессенджере</p>
+		</div>
+		<div class="inf"><p>Information:</p>
+<p align="justify">Сайт создан при поддержке многих спонсоров, силами разработчика из РТУ МИРЭА, содержит много важной и полезной информации, построен на концепциях гламура и эстетики</p>
+		</div>
+</footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</html>
