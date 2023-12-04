@@ -48,36 +48,46 @@
       <h1>Декор!</h1>
       <p style="font-size: 20px; font-family: Verdana;" align="justify">На этой странице мы подготовили для вас  множество идей, как можно освежить и украсить домашнее пространство с помощью комнатных растений</p>
     </div>
-        <div class="container">
-      <div class="slider-wrapper">
-        <button id="prev-slide" class="slide-button material-symbols-rounded">
-          <
-        </button>
-        <ul class="image-list">
-          <img class="image-item" src="img/Kill Every Plant You Touch_ Try These 23 Easy-to-Grow Houseplants.jfif" alt="img-1" />
-          <img class="image-item" src="img/Kill Every Plant You Touch_ Try These 23 Easy-to-Grow Houseplants.jfif" alt="img-2" />
-          <img class="image-item" src="img/Kill Every Plant You Touch_ Try These 23 Easy-to-Grow Houseplants.jfif" alt="img-3" />
-          <img class="image-item" src="img/Kill Every Plant You Touch_ Try These 23 Easy-to-Grow Houseplants.jfif" alt="img-4" />
-          <img class="image-item" src="img/Kill Every Plant You Touch_ Try These 23 Easy-to-Grow Houseplants.jfif" alt="img-5" />
-          <img class="image-item" src="img/Kill Every Plant You Touch_ Try These 23 Easy-to-Grow Houseplants.jfif" alt="img-6" />
-          <img class="image-item" src="img/Kill Every Plant You Touch_ Try These 23 Easy-to-Grow Houseplants.jfif" alt="img-7" />
-          <img class="image-item" src="img/Kill Every Plant You Touch_ Try These 23 Easy-to-Grow Houseplants.jfif" alt="img-8" />
-          <img class="image-item" src="img/Kill Every Plant You Touch_ Try These 23 Easy-to-Grow Houseplants.jfif" alt="img-9" />
-          <img class="image-item" src="img/Kill Every Plant You Touch_ Try These 23 Easy-to-Grow Houseplants.jfif" alt="img-10" />
-        </ul>
-        <button id="next-slide" class="slide-button material-symbols-rounded">
-          >
-        </button>
-      </div>
-      <div class="slider-scrollbar">
-        <div class="scrollbar-track">
-          <div class="scrollbar-thumb"></div>
-        </div>
-      </div>
+    <div class="columnblock">
+      <section class="slider-wrapper">
+  <button class="slide-arrow" id="slide-arrow-prev">
+    &#8249;
+  </button>
+  <button class="slide-arrow" id="slide-arrow-next">
+    &#8250;
+  </button>
+  <ul class="slides-container" id="slides-container">
+    <li class="slide"><img class="image-item" src="img/1.jpg" alt="img-1" /></li>
+    <li class="slide"><img class="image-item" src="img/2.jpeg" alt="img-2" /></li>
+    <li class="slide"><img class="image-item" src="img/3.jpg" alt="img-3" /></li>
+    <li class="slide"><img class="image-item" src="img/4.jpg" alt="img-4" /></li>
+    <li class="slide"><img class="image-item" src="img/5.jpg" alt="img-5" /></li>
+    <li class="slide"><img class="image-item" src="img/6.jpg" alt="img-6" /></li>
+    <li class="slide"><img class="image-item" src="img/7.jpg" alt="img-7" /></li>
+    <li class="slide"><img class="image-item" src="img/8.jpg" alt="img-8" /></li>
+    <li class="slide"><img class="image-item" src="img/9.jpg" alt="img-9" /></li>
+    <li class="slide"><img class="image-item" src="img/10.jpg" alt="img-10" /></li>
+  </ul>
+</section>
     </div>
+    
+<p></p>
+<script>
+  const slidesContainer = document.getElementById("slides-container");
+const slide = document.querySelector(".slide");
+const prevButton = document.getElementById("slide-arrow-prev");
+const nextButton = document.getElementById("slide-arrow-next");
 
-    <p></p>
+nextButton.addEventListener("click", () => {
+  const slideWidth = slide.clientWidth;
+  slidesContainer.scrollLeft += slideWidth;
+});
 
+prevButton.addEventListener("click", () => {
+  const slideWidth = slide.clientWidth;
+  slidesContainer.scrollLeft -= slideWidth;
+});
+</script>
     
 <footer id="footer">
     <div class="contact"><address><p>Контакты:</p></address>
