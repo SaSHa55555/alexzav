@@ -42,7 +42,6 @@
 }
 .block {margin: 3rem;}
  
-/* Стили для текстового поля с кнопкой "Развернуть" */
 .limiter {
   max-height: 100px;
   overflow: hidden;
@@ -106,7 +105,6 @@
   margin-top: 5px;
   display: flex;
   flex-wrap: wrap;
-  /*justify-content: flex-start;*/
 }
 
 .image {
@@ -122,12 +120,11 @@
 
 .row {
   display: flex;
-  flex-wrap: wrap;/* уберем это свойство чтобы освободить фиксированный отступ справа и слева */
-  justify-content: space-between; /* это позволит изображениям быть прижатыми к левому и правому краю */
+  flex-wrap: wrap;
+  justify-content: space-between; 
 }
 
 
-/* Стили для формы */
 .form-container {
   max-width: 400px;
   margin: 50px auto;
@@ -161,21 +158,6 @@ input[type="file"] {
   font-size: 14px;
 }
 
-/*button {
-  padding: 10px 20px;
-  background-color: pink;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-button:hover{
-    background-color: white;
-    color: pink;
-}*/
-
 address a{
     text-decoration: none;
     color: green;
@@ -195,16 +177,12 @@ address a{
     text-shadow: 0px 0px 10px green;
 }
 
-.grid-container {
-}
-
 .grid-item {
   padding: 10px;
   box-shadow: 0px 0px 10px grey;
-  flex: 0 0 300px; /* Устанавливаем ширину блока с учётом отступов */
-  margin: 15px; /* Отступ между блоками */
-  box-sizing: border-box; /* Учитываем отступы в ширине блока */
-  /* Дополнительные стили для внешнего вида блоков */
+  flex: 0 0 300px; 
+  margin: 15px; 
+  box-sizing: border-box;/
   text-align: center;
    border-radius: 10px;
    transition: width 0.3s ease;
@@ -225,11 +203,11 @@ address a{
    body {
      display: flex;
      flex-direction: column;
-     min-height: 100vh; /* 100vh это 100% высоты окна браузера */
+     min-height: 100vh;
    }
 
    .content {
-     flex: 1; /* Захватываем всё доступное пространство */
+     flex: 1; 
    }
    
 #form{
@@ -253,7 +231,7 @@ address a{
                          "d b b"
                          "f f e";                  
   display: flex;
-  flex-wrap: wrap; /* Разрешаем перенос строк */
+  flex-wrap: wrap; 
 }
 
 .grid-item1{
@@ -350,122 +328,6 @@ p{
     padding: 4px;
 }
 
-/**/
-
-.container {
-  margin-top: 30px;
-  max-width: 1200px;
-  width: 95%;
-}
-.slider-wrapper {
-  position: relative;
-}
-.slider-wrapper .slide-button {
-  position: absolute;
-  top: 50%;
-  outline: none;
-  border: none;
-  height: 50px;
-  width: 50px;
-  z-index: 5;
-  color: #fff;
-  display: flex;
-  cursor: pointer;
-  font-size: 2.2rem;
-  background: #000;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  transform: translateY(-50%);
-}
-.slider-wrapper .slide-button:hover {
-  background: #404040;
-}
-.slider-wrapper .slide-button#prev-slide {
-  left: -25px;
-  display: none;
-}
-.slider-wrapper .slide-button#next-slide {
-  right: -25px;
-}
-.slider-wrapper .image-list {
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  gap: 18px;
-  font-size: 0;
-  list-style: none;
-  margin-bottom: 30px;
-  overflow-x: auto;
-  scrollbar-width: none;
-}
-.slider-wrapper .image-list::-webkit-scrollbar {
-  display: none;
-}
-.slider-wrapper .image-list .image-item {
-  width: 325px;
-  height: 400px;
-  object-fit: cover;
-}
-.container .slider-scrollbar {
-  height: 24px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-}
-.slider-scrollbar .scrollbar-track {
-  background: #ccc;
-  width: 100%;
-  height: 2px;
-  display: flex;
-  align-items: center;
-  border-radius: 4px;
-  position: relative;
-}
-.slider-scrollbar:hover .scrollbar-track {
-  height: 4px;
-}
-.slider-scrollbar .scrollbar-thumb {
-  position: absolute;
-  background: #000;
-  top: 0;
-  bottom: 0;
-  width: 50%;
-  height: 100%;
-  cursor: grab;
-  border-radius: inherit;
-}
-.slider-scrollbar .scrollbar-thumb:active {
-  cursor: grabbing;
-  height: 8px;
-  top: -2px;
-}
-.slider-scrollbar .scrollbar-thumb::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: -10px;
-  bottom: -10px;
-}
-/* Styles for mobile and tablets */
-@media only screen and (max-width: 1023px) {
-  .slider-wrapper .slide-button {
-    display: none !important;
-  }
-  .slider-wrapper .image-list {
-    gap: 10px;
-    margin-bottom: 15px;
-    scroll-snap-type: x mandatory;
-  }
-  .slider-wrapper .image-list .image-item {
-    width: 280px;
-    height: 380px;
-  }
-  .slider-scrollbar .scrollbar-thumb {
-    width: 20%;
-  }
-}
-
 .button {
   position: relative;
   padding: 10px 22px;
@@ -547,4 +409,67 @@ p{
     background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
   }
 }
-Conclusio
+
+.slider-wrapper {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.slides-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  overflow: scroll;
+  scroll-behavior: smooth;
+  list-style: none;
+  margin: 0;
+  padding-bottom: 3%;
+  gap: 2%;
+}
+
+.slide-arrow {
+  position: absolute;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 4rem;
+  background-color: white;
+  border: none;
+  width: 2rem;
+  font-size: 3rem;
+  padding: 0;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 100ms;
+}
+
+.slide-arrow:hover,
+.slide-arrow:focus {
+  opacity: 1;
+}
+
+#slide-arrow-prev {
+  left: 0;
+  padding-left: 0.25rem;
+  border-radius: 0 2rem 2rem 0;
+}
+
+#slide-arrow-next {
+  right: 0;
+  padding-left: 0.75rem;
+  border-radius: 2rem 0 0 2rem;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  /*flex: 1 0 100%;*/
+}
+
+.slide img{
+    height: calc(var(--index)*20);
+    width: auto;
+    padding: 1%;
+}
