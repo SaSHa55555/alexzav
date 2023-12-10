@@ -229,9 +229,7 @@ address a{
     display: grid;
     grid-template-areas: "a a c"
                          "d b b"
-                         "f f e";                  
-  display: flex;
-  flex-wrap: wrap; 
+                         "f f e";    
 }
 
 .grid-item1{
